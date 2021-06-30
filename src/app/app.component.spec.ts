@@ -30,6 +30,6 @@ describe('AppComponent', () => {
     const fixture = TestBed.createComponent(AppComponent);
     fixture.detectChanges();
     const compiled = fixture.nativeElement;
-    expect(compiled.querySelector('.content span').textContent).toContain('angular-rrweb-auth0 app is running!');
+    expect(compiled.querySelector('a.navbar-brand').textContent).toContain('angular-rrweb-auth0');
   });
 });
