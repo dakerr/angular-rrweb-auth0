@@ -39,15 +39,15 @@ import { SignupButtonComponent } from './components/signup-button/signup-button.
   ],
   imports: [
     AppRoutingModule,
-    AuthModule.forRoot({
-      ...env.auth,
-      httpInterceptor: {
-        allowedList: [`${env.dev.serverUrl}/api/messages/protected-message`]
-      }
-    }),
     BrowserModule,
     FontAwesomeModule,
     HttpClientModule,
+    AuthModule.forRoot({
+      ...env.auth,
+      // httpInterceptor: {
+      //   allowedList: [`${env.dev.serverUrl}/api/messages/protected-message`]
+      // }
+    }),
   ],
   providers: [
     {

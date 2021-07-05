@@ -8,6 +8,8 @@ import { AuthService } from '@auth0/auth0-angular';
 })
 
 export class AppComponent {
-  constructor(public auth: AuthService) {}
+  constructor(public auth: AuthService) {
+    auth.error$.subscribe((error) => console.log(error));
+  }
   title = 'angular-rrweb-auth0';
 }
